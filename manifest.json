@@ -1,7 +1,7 @@
 {
   "name": "scorum power",
   "description": "Get scorum now!",
-  "version": "1.0.0.1",
+  "version": "1.0.0.2",
   "icons":{"128":"icon.png"},
   "permissions": [
     "https://scorum.com/*","tabs","activeTab","storage" 
