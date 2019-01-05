@@ -26,10 +26,16 @@ $(document).on('click', '.delegate', function () {
             '<input name="number" type="number" min="0"  max="100000000" step="1">',
             callback: function (value) {
                 if (!value) return;
-                scorum.formatter.
-                var precisionValue = Number.parseFloat(value).toPrecision(12);
-                scorum.broadcast.delegateScorumpower(result.wif, result.username, delegatee, precisionValue + ' SP', function (err, result) {
+                
+                var precisionValue = Number.parseFloat(value).toFixed(9);
+                scorum.broadcast.delegateScorumpower(result.wif, result.username, delegatee, precisionValue + ' SP', function (err, delegateResult) {
+                    if(err ==null)
+                        vex.dialog.alert({
+                            message: 'Success!\n'+delegateResult.id,
+                            
+                    })
                     console.log(err, result);
+
                 }); 
 //'0.000000000 SP'
                 }

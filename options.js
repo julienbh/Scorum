@@ -1,5 +1,13 @@
 vex.defaultOptions.className = 'vex-theme-default'
 
+var data = chrome.storage.local.get(['wif', 'username'], function (result) {
+    if (result.wif == null || result.username == null){
+        return;
+    }
+    $('#username').val(result.username);
+    $('#wif').val(result.wif);
+});
+
 $(document).on('click', '.saveButton',
     save);
 
