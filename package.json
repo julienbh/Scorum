@@ -1,0 +1,7 @@
+{
+    "name": "scorumpower",
+    "version": "1.0.0",
+    "dependencies": {
+        "@scorum/scorum-js": "^2.10.0"
+    }
+}
