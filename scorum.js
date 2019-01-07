@@ -10,9 +10,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         var delegatee = window.location.pathname.substring(window.location.pathname.indexOf('@') + 1);
         scorum.api.getAccounts([delegatee], function (err, result) {
             if(err) return;
-            $('.profile-icons').append('<span class="font-weight-bold text-white  ml-0_5 mr-3 " title="The amount delegated">'+Number.parseFloat(result[0].delegated_scorumpower).toFixed(0)+' SP </span>')
+            $('.profile-icons').append('<span class="font-weight-bold text-white ml-0_5" title="The amount delegated">'+Number.parseFloat(result[0].delegated_scorumpower).toFixed(0)+' SP </span>')
             $('.profile-icons').append('<span class="separator text-white"> | </span>');
-            $('.profile-icons').append('<span class="font-weight-bold text-white  ml-0_5 mr-3 " title="The amount of delegation received">'+Number.parseFloat(result[0].received_scorumpower).toFixed(0)+' SP </span>')
+            $('.profile-icons').append('<span class="font-weight-bold text-white ml-0_5" title="The amount of delegation received">'+Number.parseFloat(result[0].received_scorumpower).toFixed(0)+' SP </span>')
         });
     }
 });
