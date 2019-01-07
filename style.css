@@ -1,8 +1,11 @@
-.saveButton{
+.button{
   padding: 8px 32px;
   position:absolute;
   bottom:25px;
+}
+.saveButton{
   right:25px;
+  background-color: purple;
 }
 
 #formdata input[type=text],
@@ -11,4 +14,10 @@
   height: 40px;
   margin-top:15px;
   padding-left:20px;
+}
+.delegate{
+  border: 1px solid #888;
+  border-radius: 42px;
+  padding: 2px 6px;
+  cursor: pointer;
 }
