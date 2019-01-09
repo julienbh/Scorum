@@ -21,3 +21,33 @@
   padding: 2px 6px;
   cursor: pointer;
 }
+
+.not-finished-table .betting-table-head .betting-table-cell:nth-child(1), .not-finished-table .betting-table-row .betting-table-cell:nth-child(1) {
+  padding-right: 0.5rem;
+  flex-basis: 192px;
+  box-sizing: content-box;
+  flex-shrink: 0;
+  margin: 0px 0px 0px 0.75rem;
+  border-color: rgb(18, 21, 38) !important;
+}
+.betting-table-cell {
+  margin: 0 0.5rem;
+  position: relative;
+}
+.betting-table-cell {
+  margin: 0 0.5rem;
+  position: relative;
+  color:white;
+}
+.betting-table-team-logo {
+  background-size: cover !important;
+}
+.betting-table-row {
+  height: 68px;
+  border-radius: 1px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+.not-finished-table .betting-table-head .betting-table-cell:nth-child(2), .not-finished-table .betting-table-row .betting-table-cell:nth-child(2) {
+  flex-basis: 112px;
+}

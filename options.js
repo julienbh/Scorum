@@ -9,6 +9,7 @@ var data = chrome.storage.local.get(['wif', 'username'], function (result) {
 });
 
 
+ 
 
 $(document).on('click', '#save',
     save);
@@ -29,7 +30,7 @@ function save() {
     var username = $('#username').val();
     var wif = $('#wif').val();
 
-    if (username == null || wif == null || wif.length != 51)
+    if (username == null || wif && wif.length != 51)
         console.error('bad username or password');
     else {
         chrome.storage.local.set(

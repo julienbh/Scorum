@@ -1,0 +1,143 @@
+<div class="grid-posts mt-5 bordered">
+    <div class="d-flex mb-2_5 grid-header justify-content-between align-items-center">
+        <h3 class="mb-0"><span>Betting</span></h3>
+        <a href="#" class="text-gray-dark-secondary pt-1_5">
+            <span>History</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" class="ml-0_5 icon-show-all">
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M-39-17H9v48h-48z"></path>
+                    <path class="icon-arrow-stroke" stroke="#b2b2b2" stroke-linecap="square" stroke-width="2" d="M2 12.286L6.966 7.32 2 2"></path>
+                </g>
+            </svg>
+        </a>
+    </div>
+    <div class="render-grid pb-3">
+        <div style="grid-area:1 / 1 / 1 / 4" class="post-card wide card">
+            <div class="betting-table not-finished-table">
+                <div class="betting-table-head d-flex flex-nowrap justify-content-between align-items-center bg-darkblue-db35">
+                    <div class="betting-table-cell"></div>
+                    <div class="betting-table-cell"><span class="caption text-gray-light-secondary text-uppercase">Date</span></div>
+                    <div class="betting-table-cell"><span class="caption text-gray-light-secondary text-uppercase">Bet</span></div>
+                    <div class="betting-table-cell"><span class="caption text-gray-light-secondary text-uppercase">Odds</span></div>
+                    <div class="betting-table-cell"><span class="caption text-gray-light-secondary text-uppercase">Stake
+                            (SCR)</span></div>
+                    <div class="betting-table-cell"><span class="caption text-gray-light-secondary text-uppercase">Profit
+                            (SCR)</span></div>
+                    <div class="betting-table-cell"><span class="caption text-gray-light-secondary text-uppercase">Status</span></div>
+                </div>
+                <div class="betting-table-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script id="template" type="x-tmpl-mustache">
+    {{#matches}}
+<div class="position-relative betting-table-row text-small d-flex flex-nowrap justify-content-between align-items-center bg-darkblue-db40">
+        
+    <a href="https://betscorum.com/en-us/game/{{game.id}}" target="_blank" class="betting-table-cell justify-content-center d-flex flex-column h-100 border-right">
+           <div class="betting-table-team font-weight-bold d-flex mb-1"><i class="mr-1 betting-table-team-logo"
+                   style="width: 20px; height: 20px; background: url(&quot;{{game.meta.team_a_logo}}&quot;);"></i><span
+                   class="betting-table-team-name text-truncate">{{game.meta.team_a_name}}</span></div>
+           <div class="betting-table-team font-weight-bold d-flex"><i class="mr-1 betting-table-team-logo"
+                   style="width: 20px; height: 20px; background: url(&quot;{{game.meta.team_b_logo}}&quot;);"></i><span
+                   class="betting-table-team-name text-truncate">{{game.meta.team_b_name}}</span></div>
+       </a>
+       <div class="betting-table-cell">{{toDate}}</div>
+       <div class="betting-table-cell"><span>{{market.type}}</span></div>
+       <div class="betting-table-cell"><span id="not-finished-item-odds">?</span></div>
+       <div class="betting-table-cell">{{stake}}</div>
+       <div class="betting-table-cell">?</div>
+       <div class="betting-table-cell d-flex align-items-center justify-content-between">
+           <div><span class="betting-table-status d-inline-block rounded-circle mr-1 bg-primary"></span><span>{{matched}}</span></div>
+       </div>
+   </div>
+   {{/matches}}
+</script>
+
+
+<!-- [
+  {
+    "id": "79a61f37-17db-45fc-bad2-706c8706ef4a",
+    "offset_id": 262138,
+    "odds": "2.4781747498189236",
+    "odds_numerator": 167651,
+    "odds_denominator": 67651,
+    "stake": "20",
+    "unmatched": "0",
+    "post_pending": false,
+    "cancel_pending": false,
+    "result": null,
+    "game": {
+      "id": 162,
+      "blockchain_id": "52cbcced-84c9-4adf-9ec5-f41c4f256d93",
+      "competition_id": 2,
+      "sport": "football",
+      "start_time": "2019-01-12T15:00:00Z",
+      "total_matched": "841.913864937",
+      "meta": {
+        "gameweek": 22,
+        "match_id": 1344081,
+        "league_id": 2,
+        "leg_number": null,
+        "round_name": "Regular Season",
+        "start_time": "2019-01-12T15:00:00Z",
+        "team_a_logo": "http:SLASHSLASHwww.datasportsgroup.comSLASHimagesSLASHclubsSLASH200x200SLASH492.png",
+        "team_a_name": "Burnley",
+        "team_b_logo": "http:SLASHSLASHwww.datasportsgroup.comSLASHimagesSLASHclubsSLASH200x200SLASH460.png",
+        "team_b_name": "Fulham",
+        "league_localization_key": "league-epl"
+      },
+      "result_validation_progress": null
+    },
+    "market": {
+      "type": "winner_1x2",
+      "meta": {},
+      "winner_wincase": null
+    },
+    "wincase": true
+  },
+  {
+    "id": "b79fc3ac-e111-490d-9340-6a1764acb967",
+    "offset_id": 262121,
+    "odds": "2.22",
+    "odds_numerator": 2220,
+    "odds_denominator": 1000,
+    "stake": "20",
+    "unmatched": "0",
+    "post_pending": false,
+    "cancel_pending": false,
+    "result": null,
+    "game": {
+      "id": 164,
+      "blockchain_id": "a59d3964-e2c6-4918-a02c-bcbe6804a42b",
+      "competition_id": 2,
+      "sport": "football",
+      "start_time": "2019-01-12T15:00:00Z",
+      "total_matched": "868.863873184",
+      "meta": {
+        "gameweek": 22,
+        "match_id": 1344084,
+        "league_id": 2,
+        "leg_number": null,
+        "round_name": "Regular Season",
+        "start_time": "2019-01-12T15:00:00Z",
+        "team_a_logo": "http:SLASHSLASHwww.datasportsgroup.comSLASHimagesSLASHclubsSLASH200x200SLASH508.png",
+        "team_a_name": "Crystal Palace",
+        "team_b_logo": "http:SLASHSLASHwww.datasportsgroup.comSLASHimagesSLASHclubsSLASH200x200SLASH511.png",
+        "team_b_name": "Watford",
+        "league_localization_key": "league-epl"
+      },
+      "result_validation_progress": null
+    },
+    "market": {
+      "type": "winner_1x2",
+      "meta": {},
+      "winner_wincase": null
+    },
+    "wincase": true
+  }
+] -->
