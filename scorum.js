@@ -15,9 +15,10 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             $('.profile-icons').append('<span class="font-weight-bold text-white ml-0_5" title="The amount of delegation received">' + Number.parseFloat(result[0].received_scorumpower).toFixed(0) + ' SP </span>')
         });
     }
-    $.initialize(".home-container", function () {
+    var init;
+    init = $.initialize(".home-container", function () {
         setTimeout(function () {
-            if ($.find(".container.betting").length > 0) return;
+            if ($(".container.betting").length > 0) return;
 
             chrome.storage.local.get(['wif', 'username'], function (result) {
                 if (result.username == null) return;
@@ -48,6 +49,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             });
         });
     });
+    init.disconnect();
 });
 
 
