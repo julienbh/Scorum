@@ -28,11 +28,7 @@
   box-sizing: content-box;
   flex-shrink: 0;
   margin: 0px 0px 0px 0.75rem;
-  border-color: rgb(18, 21, 38) !important;
-}
-.betting-table-cell {
-  margin: 0 0.5rem;
-  position: relative;
+  border-color: rgb(18, 21, 38);
 }
 .betting-table-cell {
   margin: 0 0.5rem;

@@ -1,5 +1,5 @@
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-  if (changeInfo.status == 'complete') { // Added braces for clarity
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === 'complete') { // Added braces for clarity
     chrome.tabs.sendMessage(tabId, {});
   }
 });
