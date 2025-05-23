@@ -26,13 +26,7 @@
         "https://scorum.com/*"
       ],
       "js": [
-        "vendor/jquery-1.12.4.min.js",
-        "vendor/underscore-min.js",
-        "vendor/scorum.min.js",
-        "vendor/jquery.init.js",
-        "vendor/vex.min.js",
-        "vendor/mustache.min.js",
-        "scorum.js"
+        "scorum.bundle.js"
       ],
       "css": [
         "vendor/vex.theme.css",
@@ -44,7 +38,7 @@
   "background": {
     "persistent": true,
     "scripts": [
-      "background.js"
+      "background.bundle.js"
     ]
   },
   "browser_action": {
